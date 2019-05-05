@@ -7,13 +7,14 @@ import javax.swing.JFrame;
 
 
 public class Game extends Canvas implements Runnable{
-	public static final int WIDTH=270;	
-	public static final int HEIGHT=WIDTH/14*10;
+	public static final int WIDTH=320;	
+	public static final int HEIGHT=180;
 	public static final int SCALE = 4;
 	public static final String TITLE = "Mario";
 	private Thread thread;
 	private boolean running= false;
-	
+	public static Handler handler;
+
 	public Game() {
 		Dimension size = new Dimension(WIDTH*SCALE,HEIGHT*SCALE);
 		setPreferredSize(size);
